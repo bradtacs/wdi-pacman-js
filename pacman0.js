@@ -35,13 +35,12 @@ var Clyde = {
   edible: false
 };
 
-var ghosts = [Inky,Blinky,Pinky, Clyde];
+var ghosts = ['Inky','Blinky','Pinky', 'Clyde'];
 
 // replace this comment with your four ghosts setup as objects
-function eatGhost(ghost) {
-
-  if (ghost.edible === false) {
-    console.log('\n You Lost A Life!');
+function eatGhost(ghosts) {
+  if (ghosts.edible === false) {
+    console.log('\nYou Died! ');
     lives -= 1;
   }
 }
@@ -98,12 +97,8 @@ function processInput(key) {
       eatDot();
 
       break;
-    case '1':
-      eatGhost(Inky);
-      break;
-
-      case '2':
-        eatGhost(Blinky);
+    case '1';
+      eatGhost();
       break;
     default:
       console.log('\nInvalid Command!');
