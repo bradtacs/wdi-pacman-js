@@ -14,7 +14,7 @@ var Inky = {
 };
 
 var Blinky {
-  menu_option: '1',
+  menu_option: '2',
   name: 'Blinky',
   colour:'Cyan',
   character: 'Speedy',
@@ -22,7 +22,7 @@ var Blinky {
 };
 
 var Pinky {
-  menu_option: '1'
+  menu_option: '3'
   name: 'Pinky',
   colour: 'Pink',
   character: 'Bashful',
@@ -30,15 +30,20 @@ var Pinky {
 };
 
 var Clyde {
-  menu_option: '1',
+  menu_option: '4',
   name: 'Clyde',
   colour: 'Orange',
   edible: false
 };
 
 var ghosts = ['Inky','Blinky','Pinky', 'Clyde'];
-// replace this comment with your four ghosts setup as objects
 
+// replace this comment with your four ghosts setup as objects
+function eatGhost(ghost) {
+  if (edible = false) {
+`   `
+  }
+}
 
 // Draw the screen functionality
 function drawScreen() {
@@ -80,6 +85,11 @@ function eatDot() {
   score += 10;
 }
 
+// Lives
+function loseLife() {
+  console.log('\nYou Died! ');
+  var lives - 1;
+}
 
 // Process Player's Input
 function processInput(key) {
@@ -90,6 +100,7 @@ function processInput(key) {
       break;
     case 'd':
       eatDot();
+      loseLife();
       break;
     default:
       console.log('\nInvalid Command!');
