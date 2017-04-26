@@ -2,7 +2,6 @@
 var score = 0;
 var lives = 2;
 
-
 // Define your ghosts here
 
 var Inky = {
@@ -13,7 +12,7 @@ var Inky = {
   edible: false
 };
 
-var Blinky {
+var Blinky = {
   menu_option: '2',
   name: 'Blinky',
   colour:'Cyan',
@@ -21,15 +20,15 @@ var Blinky {
   edible: false
 };
 
-var Pinky {
-  menu_option: '3'
+var Pinky = {
+  menu_option: '3',
   name: 'Pinky',
   colour: 'Pink',
   character: 'Bashful',
   edible: false
 };
 
-var Clyde {
+var Clyde = {
   menu_option: '4',
   name: 'Clyde',
   colour: 'Orange',
@@ -41,7 +40,7 @@ var ghosts = ['Inky','Blinky','Pinky', 'Clyde'];
 // replace this comment with your four ghosts setup as objects
 function eatGhost(ghost) {
   if (edible = false) {
-`   `
+
   }
 }
 
@@ -88,7 +87,7 @@ function eatDot() {
 // Lives
 function loseLife() {
   console.log('\nYou Died! ');
-  var lives - 1;
+  lives - 1;
 }
 
 // Process Player's Input
