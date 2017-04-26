@@ -97,24 +97,14 @@ function processInput(key) {
     case 'd':
       eatDot();
 
-    break;
-
+      break;
     case '1':
       eatGhost(Inky);
-    break;
+      break;
 
-    case '2':
-      eatGhost(Blinky);
-    break;
-
-    case '3':
-      eatGhost(Pinky);
-    break;
-
-    case '2':
-      eatGhost(Clyde);
-    break;
-
+      case '2':
+        eatGhost(Blinky);
+      break;
     default:
       console.log('\nInvalid Command!');
   }
