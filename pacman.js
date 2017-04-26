@@ -1,6 +1,7 @@
 // Setup initial game stats
 var score = 0;
 var lives = 2;
+var powerPellets = 4;
 
 // Define your ghosts here
 
@@ -43,6 +44,10 @@ function eatGhost(ghost) {
   if (ghost.edible === false) {
     console.log('\n You Lost A Life!');
     lives -= 1;
+     if (lives <= 0) {
+        process.exit();
+        console.log('\nYou Died!');
+    }
   }
 }
 
@@ -61,7 +66,9 @@ function clearScreen() {
 }
 
 function displayStats() {
-  console.log('Score: ' + score + '     Lives: ' + lives);
+  console.log('Score: ' + score + '     Lives: ' + lives   );
+  console.log('Power Pellets: ' + powerPellets);
+
 }
 
 function displayMenu() {
