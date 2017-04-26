@@ -39,8 +39,9 @@ var ghosts = ['Inky','Blinky','Pinky', 'Clyde'];
 
 // replace this comment with your four ghosts setup as objects
 function eatGhost(ghost) {
-  if (edible = false) {
-
+  if (ghost.edible === false) {
+    console.log('\nYou Died! ');
+    lives -= 1;
   }
 }
 
@@ -84,11 +85,6 @@ function eatDot() {
   score += 10;
 }
 
-// Lives
-function loseLife() {
-  console.log('\nYou Died! ');
-  lives - 1;
-}
 
 // Process Player's Input
 function processInput(key) {
@@ -99,7 +95,10 @@ function processInput(key) {
       break;
     case 'd':
       eatDot();
-      loseLife();
+
+      break;
+    case '1';
+      eatGhost();
       break;
     default:
       console.log('\nInvalid Command!');
