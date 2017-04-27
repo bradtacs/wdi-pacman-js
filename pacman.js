@@ -54,6 +54,7 @@ function eatGhost(ghost) {
 function eatPowerPellet(){
    console.log('\nChomp!');
   score += 50;
+  powerPellets --;
   // loop through ghosts
     for (var index = 0; index < ghosts.length; index++) {
       ghosts[index].edible = true;
